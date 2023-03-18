@@ -2,10 +2,10 @@ import os
 
 from textual.app import App
 
-from pyneng_quiz.question_table_widget import QuestionTable
-from pyneng_quiz.help_table_widget import HelpTable
-from pyneng_quiz.select_questions_widget import SelectQuestionTable
-from pyneng_quiz import ALL_QUESTIONS
+from pynenguk_quiz.question_table_widget import QuestionTable
+from pynenguk_quiz.help_table_widget import HelpTable
+from pynenguk_quiz.select_questions_widget import SelectQuestionTable
+from pynenguk_quiz import ALL_QUESTIONS
 
 
 class TermQuiz(App):
