@@ -147,7 +147,7 @@
       "description": "Що виведе останній рядок?",
       "code": "d1 = d2 = {1: 100, 2: 200, 3: 300}\nd1[4] = 400\nprint(d2[4])",
       "answers": {
-        "1": "Исключение KeyError",
+        "1": "Виняток KeyError",
         "2": "300",
         "3": "400"
       },
@@ -322,7 +322,7 @@
       "code": "In [1]: var_a = 3500\n\nIn [2]: var_b = var_a\n\nIn [3]: id(var_a)\nOut[2]: 3044598608",
       "answers": {
         "1": "3044598608",
-        "2": "Другое"
+        "2": "Інше"
       },
       "correct_answer": "1",
       "multiple_choices": false
@@ -346,7 +346,7 @@
       "code": "In [1]: var_a = 3500\n\nIn [2]: var_b = 3500\n\nIn [3]: id(var_a)\nOut[3]: 3044599696",
       "answers": {
         "1": "3044599696",
-        "2": "Другое"
+        "2": "Інше"
       },
       "correct_answer": "2",
       "multiple_choices": false
@@ -406,7 +406,7 @@
   ],
   "05 Створення базових скриптів (input, sys.argv)": [
     {
-      "description": "Який тип даних буде в змінній result при виклику скрипта нижче таким чином:\n$ python script.py 100",
+      "description": "Який тип даних буде в змінній result, коли наведений нижче скрипт викликається таким чином:\n$ python script.py 100",
       "code": "from sys import argv\nresult = argv",
       "answers": {
         "1": "список (list)",
@@ -417,7 +417,7 @@
       "multiple_choices": false
     },
     {
-      "description": "Які типи даних будуть у елементів списку argv при виклику скрипта нижче таким чином::\n$ python script.py 100 test",
+      "description": "Які типи даних будуть у елементів списку argv, коли наведений нижче скрипт викликається таким чином::\n$ python script.py 100 test",
       "code": "from pprint import pprint\nfrom sys import argv\npprint(argv)",
       "answers": {
         "1": "список (list)",
@@ -428,7 +428,7 @@
       "multiple_choices": true
     },
     {
-      "description": "Яке значення буде у змінної result при виклику скрипта нижче таким чином:\n$ python script.py test",
+      "description": "Яке значення буде у змінної result, коли наведений нижче скрипт викликається таким чином:\n$ python script.py test",
       "code": "from sys import argv\nresult = argv[0]",
       "answers": {
         "1": "''",
@@ -440,7 +440,7 @@
       "multiple_choices": false
     },
     {
-      "description": "Яке значення буде у змінної result при виклику скрипта нижче таким чином:\n$ python script.py 100 test",
+      "description": "Яке значення буде у змінної result, коли наведений нижче скрипт викликається таким чином:\n$ python script.py 100 test",
       "code": "from sys import argv\nresult = argv[1]",
       "answers": {
         "1": "'test'",
@@ -453,8 +453,8 @@
       "multiple_choices": false
     },
     {
-      "description": "Який тип даних буде в змінній result при виклику скрипта нижче таким чином:\n$ python script.py\nВведите число: 100",
-      "code": "result = input('Введите число: ')",
+      "description": "Який тип даних буде в змінній result, коли наведений нижче скрипт викликається таким чином:\n$ python script.py\nВведіть число: 100",
+      "code": "result = input('Введіть число: ')",
       "answers": {
         "1": "список (list)",
         "2": "рядок (str)",
@@ -510,12 +510,12 @@
     },
     {
       "description": "Що буде виведено на стандартний потік виводу? (значення, що виводяться на різних рядках, розділені комою)",
-      "code": "user = 'admin'\npasswd = 'admin12'\n\nif len(passwd) <= 8:\n    print('Пароль слишком короткий')\nif user in passwd:\n    print('Пароль содержит имя пользователя')\nelse:\n    print('Пароль для пользователя установлен')\n",
+      "code": "user = 'admin'\npasswd = 'admin12'\n\nif len(passwd) <= 8:\n    print('Пароль надто короткий')\nif user in passwd:\n    print('Пароль містить ім'я користувача')\nelse:\n    print('Пароль для користувача встановлено')\n",
       "answers": {
-        "1": "Пароль слишком короткий",
-        "2": "Пароль содержит имя пользователя",
-        "3": "Пароль слишком короткий, Пароль содержит имя пользователя",
-        "4": "Пароль для пользователя установлен"
+        "1": "Пароль надто короткий",
+        "2": "Пароль містить ім'я користувача",
+        "3": "Пароль надто короткий, Пароль містить ім'я користувача",
+        "4": "Пароль для користувача встановлено"
       },
       "correct_answer": "3",
       "multiple_choices": false
@@ -996,7 +996,7 @@
       "multiple_choices": true
     },
     {
-      "description": "Що буде виведено на стандартний потік виведення під час виклику скрипту script2.py? (значення, що виводяться на різних рядках, розділені комою)",
+      "description": "Що буде виведено на стандартний потік виведення після виклику скрипта script2.py? (значення, що виводяться на різних рядках, розділені комою)",
       "code": "# script1.py\n\ndef func1(num1, num2):\n    return num1 + num2\n\nprint(func1(5, 2))\n\n# script2.py\nfrom script1 import func1\n\nprint(func1(10, 1))",
       "answers": {
         "1": "7",
@@ -1009,7 +1009,7 @@
       "multiple_choices": false
     },
     {
-      "description": "Що буде виведено на стандартний потік виведення під час виклику скрипту script2.py? (значення, що виводяться на різних рядках, розділені комою)",
+      "description": "Що буде виведено на стандартний потік виведення після виклику скрипта script2.py? (значення, що виводяться на різних рядках, розділені комою)",
       "code": "##### script1.py\n\ndef func1(num1, num2):\n    return num1 + num2\n\nif __name__ == '__main__':\n    print(func1(5, 2))\n\n##### script2.py\nfrom script1 import func1\n\nif __name__ == '__main__':\n    print(func1(10, 1))",
       "answers": {
         "1": "7",
